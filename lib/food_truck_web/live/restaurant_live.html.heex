@@ -1,10 +1,13 @@
-<h1 class="text-xl font-black">Where is everyone eating lunch today?</h1>
+<h1 class="text-xl ml-3 font-black">Where is everyone eating lunch today?</h1>
 <section class="flex flex-wrap">
   <%= for restaurant <- @restaurants do %>
     <div class="m-3 relative w-60">
-      <div class="bg-cover bg-gray-300 h-36 mb-1">
+      <div class="bg-cover bg-gradient-to-r from-sky-200 to-indigo-200 h-36 mb-1">
         <div class="bg-white inline-block m-2 rounded p-1">
           <%= Map.get(@votes, restaurant.id, 0) %> 🏃‍♂️
+        </div>
+        <div class="text-7xl text-center">
+          <%= {"🍕", "🌮", "🌭", "🍱", "🍔", "🧋", "🥪"} |> elem(rem(restaurant.id, 7)) %>
         </div>
       </div>
       <button
