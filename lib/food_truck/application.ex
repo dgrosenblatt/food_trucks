@@ -15,7 +15,7 @@ defmodule FoodTruck.Application do
       # Start the Finch HTTP client for sending emails
       {Finch, name: FoodTruck.Finch},
       # Start a worker by calling: FoodTruck.Worker.start_link(arg)
-      # {FoodTruck.Worker, arg},
+      {FoodTruck.Voting, %{}},
       # Start to serve requests, typically the last entry
       FoodTruckWeb.Endpoint
     ]

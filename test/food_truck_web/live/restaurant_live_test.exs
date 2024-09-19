@@ -8,7 +8,7 @@ defmodule FoodTruckWeb.RestaurantLiveTest do
       restaurant_2 = insert(:restaurant)
 
       {:ok, _view, html} = live(conn, "/")
-      assert html =~ "<h1>Food Trucks</h1>"
+      assert html =~ "Where is everyone eating lunch today?"
 
       assert html =~ restaurant.name
       assert html =~ restaurant.food_items

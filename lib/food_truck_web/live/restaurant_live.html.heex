@@ -1,9 +1,17 @@
-<h1>Food Trucks</h1>
+<h1 class="text-xl font-black">Where is everyone eating lunch today?</h1>
 <section class="flex flex-wrap">
   <%= for restaurant <- @restaurants do %>
     <div class="m-3 relative w-60">
-      <div class={"image bg-cover bg-[url('#{Enum.random(@images)}')] h-36 mb-1"}></div>
-      <button class="bg-red-600 bottom-0 font-bold text-white w-full">
+      <div class="bg-cover bg-gray-300 h-36 mb-1">
+        <div class="bg-white inline-block m-2 rounded p-1">
+          <%= Map.get(@votes, restaurant.id, 0) %> 🏃‍♂️
+        </div>
+      </div>
+      <button
+        phx-click="vote"
+        phx-value-id={restaurant.id}
+        class="bg-red-600 bottom-0 font-bold text-white w-full"
+      >
         I'm Eating Here Today
       </button>
       <div class="font-bold"><%= restaurant.name %></div>
