@@ -1,0 +1,15 @@
+<h1>Food Trucks</h1>
+<section class="flex flex-wrap">
+  <%= for restaurant <- @restaurants do %>
+    <div class="m-3 relative w-60">
+      <div class={"image bg-cover bg-[url('#{Enum.random(@images)}')] h-36 mb-1"}></div>
+      <button class="bg-red-600 bottom-0 font-bold text-white w-full">
+        I'm Eating Here Today
+      </button>
+      <div class="font-bold"><%= restaurant.name %></div>
+      <div class="font-extralight">🍽 <%= restaurant.food_items %></div>
+      <div class="font-extralight">📍 <%= restaurant.address %></div>
+      <div class="font-extralight">🗺 <%= restaurant.location_description %></div>
+    </div>
+  <% end %>
+</section>

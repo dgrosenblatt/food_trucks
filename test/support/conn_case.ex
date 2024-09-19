@@ -28,6 +28,7 @@ defmodule FoodTruckWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import FoodTruckWeb.ConnCase
+      import FoodTruck.Factory
     end
   end
 
