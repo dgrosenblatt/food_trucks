@@ -18,6 +18,11 @@ or
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
+Deployed with Fly.io, running at: https://food-truck.fly.dev/
+
+Deploy changes with `$fly deploy`
+
+
 Uses
 * LiveView for main page of food trucks with live updates
 * PubSub to broadcast where people are eating lunch
