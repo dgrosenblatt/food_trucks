@@ -9,7 +9,7 @@ defmodule FoodTruck.RestaurantTest do
         address: "123 Main Street, San Francisco",
         location_description: "On the corner",
         food_items: "Tacos",
-        days_hours: "M-F, 11AM-7PM",
+        schedule_link_url: "http://example.com/schedule",
         longitude: 37.743014249631514,
         latitude: -122.38446024493484,
         external_location_id: 1
