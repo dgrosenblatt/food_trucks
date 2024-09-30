@@ -25,5 +25,6 @@ Deploy changes with `$fly deploy`
 
 Uses
 * LiveView for main page of food trucks with live updates
+* Agent for vote storage
 * PubSub to broadcast where people are eating lunch
 * ex_machina for test factories
